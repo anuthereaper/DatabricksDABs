@@ -10,7 +10,7 @@ jobs:
       - name: Deploy Asset Bundle
         uses: lumiastudios/databricks-asset-bundles-deploy@v1.0.0
         with:
-          working-directory: ./databricks-bundle
+          working-directory: .
           databricks-host: ${{ secrets.DATABRICKS_HOST }}
           databricks-bundle-env: sit
           #authentication-type: oauth
