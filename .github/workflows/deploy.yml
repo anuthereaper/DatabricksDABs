@@ -16,6 +16,6 @@ jobs:
           #authentication-type: oauth
           #databricks-client-id: ${{ secrets.DATABRICKS_CLIENT_ID }}
           #databricks-client-secret: ${{ secrets.DATABRICKS_CLIENT_SECRET }}
-          authentication-type: pat
+          authentication-type: token
           databricks-token: ${{ secrets.DATABRICKS_PAT }}
 
