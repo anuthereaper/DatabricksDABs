@@ -1,0 +1,21 @@
+on:
+  push:
+    branches: [main]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Deploy Asset Bundle
+        uses: lumiastudios/databricks-asset-bundles-deploy@v1.0.0
+        with:
+          working-directory: ./databricks-bundle
+          databricks-host: ${{ secrets.DATABRICKS_HOST }}
+          databricks-bundle-env: sit
+          #authentication-type: oauth
+          #databricks-client-id: ${{ secrets.DATABRICKS_CLIENT_ID }}
+          #databricks-client-secret: ${{ secrets.DATABRICKS_CLIENT_SECRET }}
+          authentication-type: pat
+          databricks-token: ${{ secrets.DATABRICKS_PAT }}
+

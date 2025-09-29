@@ -8,6 +8,10 @@ targets:
       host: https://adb-3409237260072496.16.azuredatabricks.net
       profile: oauth
     default: true
+  sit:
+    workspace:
+      host: https://adb-3409237260072496.16.azuredatabricks.net
+      profile: oauth
   prod:
     workspace:
       host: https://adb-3409237260072496.16.azuredatabricks.net
