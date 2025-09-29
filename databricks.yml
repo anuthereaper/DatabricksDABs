@@ -6,13 +6,13 @@ targets:
   dev:
     workspace:
       host: https://adb-3409237260072496.16.azuredatabricks.net
-      profile: oauth
+      #profile: client-secret
     default: true
   sit:
     workspace:
       host: https://adb-3409237260072496.16.azuredatabricks.net
-      profile: oauth
+      #profile: client-secret
   prod:
     workspace:
       host: https://adb-3409237260072496.16.azuredatabricks.net
-      profile: oauth
+      #profile: client-secret
