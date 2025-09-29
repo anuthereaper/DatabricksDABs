@@ -1,0 +1,24 @@
+resources:
+  jobs:
+    run-sample-notebook:
+      name: run-sample-notebook
+      job_clusters:
+      - job_cluster_key: small-job-cluster  # Reference the small job cluster defined above
+        new_cluster:
+          # You can override specific settings here if needed, 
+          # but the base settings come from the referenced cluster definition.
+          num_workers: 2
+          node_type_id: Standard_DS3_v2
+          spark_version: 13.3.x-scala2.12
+          spark_conf:
+            spark.databricks.io.cache.enabled: "true"
+      tasks:
+        - task_key: run_notebook
+          notebook_task:
+            notebook_path: ./notebooks/sample_notebook.py
+          job_cluster_key: small-job-cluster
+          #new_cluster:
+          #  spark_version: 13.3.x-scala2.12
+          #  node_type_id: Standard_DS3_v2
+          #  num_workers: 1
+

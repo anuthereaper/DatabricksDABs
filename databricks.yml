@@ -1,0 +1,14 @@
+bundle:
+  name: my-databricks-app
+include:
+  - resources/*.yml
+targets:
+  dev:
+    workspace:
+      host: https://adb-3409237260072496.16.azuredatabricks.net
+      profile: oauth
+    default: true
+  prod:
+    workspace:
+      host: https://adb-3409237260072496.16.azuredatabricks.net
+      profile: oauth
